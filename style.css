@@ -1,0 +1,124 @@
+body {
+    --bg1: #E1DADA;
+    --bg2: white;
+    --fg1: black;
+    --fg2: #272525;
+    --bd1: #969191;
+    --t: 0.6s ease;
+    display: flex;
+    justify-content: center;
+    transition: background var(--t);
+    background: var(--bg1);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+button {
+    transition: color var(--t);
+    color: var(--fg2);
+}
+
+#content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70rem;
+    padding: 2rem;
+    transition: color var(--t), background var(--t);
+    color: var(--fg1);
+    background: var(--bg2);
+    font-size: 0.75rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#query {
+    transition: color var(--t), background var(--t), border var(--t);
+    background: var(--bg2);
+    color: var(--fg1);
+    border: 1px solid var(--bd1);
+    border-radius: 3pt;
+    padding: 0.25rem;
+}
+
+#colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+}
+
+#reduce {
+    transition: background var(--t), border var(--t), color var(--t);
+    margin-left: 2rem;
+    background: var(--bg1);
+    border: 1px solid var(--bd1);
+    border-radius: 3pt;
+    padding: 3pt 6pt;
+}
+
+.theme {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.disabled {
+    display: none;
+}
+
+.dark {
+    --bg1: #242323;
+    --bg2: black;
+    --fg1: white;
+    --fg2: #d3cbcb;
+    --bd1: #3a3838;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.color-block {
+    min-width: 6rem;
+    min-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background var(--t);
+    background: var(--bg2);
+}
+
+.color {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+@media(max-width: 600px) {
+    #controls {
+        flex-direction: column;
+    }
+
+    #reduce {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media(max-width: 1300px) {
+    .sm-mt-0 {
+        margin-top: 0;
+    }
+}
