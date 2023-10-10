@@ -54,13 +54,14 @@ button {
     align-items: center;
 }
 
-#reduce {
+button {
     transition: background var(--t), border var(--t), color var(--t);
     margin-left: 2rem;
     background: var(--bg1);
     border: 1px solid var(--bd1);
     border-radius: 3pt;
     padding: 3pt 6pt;
+    cursor: pointer;
 }
 
 .theme {
@@ -89,6 +90,13 @@ button {
     margin-top: 3rem;
 }
 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
 .color-block {
     min-width: 6rem;
     min-height: 6rem;
@@ -97,6 +105,12 @@ button {
     align-items: center;
     transition: background var(--t);
     background: var(--bg2);
+}
+
+.converted {
+    border: 1px solid var(--bd1);
+    padding: 0.5rem;
+    flex-direction: row;
 }
 
 .color {

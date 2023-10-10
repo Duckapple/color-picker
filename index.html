@@ -15,8 +15,11 @@
         It extracts colors, yo.
         <div class="mt-3" id="controls">
             <textarea name="query" id="query" cols="30" rows="10" placeholder="Insert text here"></textarea>
-            <button id="reduce" alt="Reduce the input text to just the color definitions found">Reduce text to only
-                colors</button>
+            <div class="flex-col">
+                <button id="reduce" title="Reduce the input text to just the color definitions found">Reduce text to only
+                    colors</button>
+                <button id="convert" title="Reduce the input text to just the color definitions found">Convert colors to tailwind colors</button>
+            </div>
         </div>
         <div class="mt-3" id="colors"></div>
         <button id="dark-mode" class="theme">
@@ -42,6 +45,7 @@
             </svg>
         </button>
     </div>
+    <script src="tailwind-colors.js"></script>
     <script src="picker.js"></script>
 </body>
 
